@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscripción - Jugadores Warzone Colombia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <div class="background-overlay"></div>
+
+  <header class="text-white text-center py-4 header-colombia">
+    <h1>Elite Warzone Colombia</h1>
+    <p>¿Tienes lo necesario para representar a Colombia?</p>
+  </header>
+
+  <main class="container d-flex justify-content-center align-items-center my-5">
+    <div class="form-box shadow-lg p-5">
+      <h2 class="mb-4 text-center text-light">Formulario de inscripción</h2>
+      <form action="#" method="post" enctype="multipart/form-data" novalidate>
+
+        <div class="mb-3">
+          <label for="nombre" class="form-label text-light">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="edad" class="form-label text-light">Edad</label>
+          <input type="number" class="form-control" id="edad" name="edad" min="10" max="99" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="ciudad" class="form-label text-light">Ciudad</label>
+          <input type="text" class="form-control" id="ciudad" name="ciudad" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="nickname" class="form-label text-light">Nickname verificado</label>
+          <input type="text" class="form-control" id="nickname" name="nickname" pattern="^[A-Za-z0-9_]{3,16}$" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="rango" class="form-label text-light">Rango más alto alcanzado</label>
+          <select class="form-select" id="rango" name="rango" required>
+            <option value="">Selecciona un rango</option>
+            <option value="Bronce">Bronce</option>
+            <option value="Plata">Plata</option>
+            <option value="Oro">Oro</option>
+            <option value="Platino">Platino</option>
+            <option value="Diamante">Diamante</option>
+            <option value="Crimsón">Crimsón</option>
+            <option value="Iridescente">Iridescente</option>
+            <option value="Top 250">Top 250</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label text-light">Tipo de jugador</label><br>
+          <div class="form-check form-check-inline text-light">
+            <input class="form-check-input" type="radio" name="tipoJugador" id="competitivo" value="competitivo" required>
+            <label class="form-check-label" for="competitivo">Competitivo</label>
+          </div>
+          <div class="form-check form-check-inline text-light">
+            <input class="form-check-input" type="radio" name="tipoJugador" id="casual" value="casual" required>
+            <label class="form-check-label" for="casual">Casual</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label text-light">Modalidad preferida</label><br>
+          <div class="form-check form-check-inline text-light">
+            <input class="form-check-input" type="checkbox" name="modalidad[]" value="solo" id="solo">
+            <label class="form-check-label" for="solo">Solo</label>
+          </div>
+          <div class="form-check form-check-inline text-light">
+            <input class="form-check-input" type="checkbox" name="modalidad[]" value="duos" id="duos">
+            <label class="form-check-label" for="duos">Dúos</label>
+          </div>
+          <div class="form-check form-check-inline text-light">
+            <input class="form-check-input" type="checkbox" name="modalidad[]" value="escuadra" id="escuadra">
+            <label class="form-check-label" for="escuadra">Escuadra</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="archivo" class="form-label text-light">Sube tus mejores jugadas</label>
+          <input class="form-control" type="file" id="archivo" name="archivo" accept="video/*">
+        </div>
+
+        <div class="mb-3">
+          <label for="comentarios" class="form-label text-light">Comentarios</label>
+          <textarea class="form-control" id="comentarios" name="comentarios" rows="4" placeholder="Háblanos de tus partidas más épicas..."></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-warning px-5">Enviar</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer class="text-white text-center py-3 footer-dark">
+    <p>&copy; 2025 Warzone Colombia | Elite Selection</p>
+  </footer>
+
+</body>
+</html>
